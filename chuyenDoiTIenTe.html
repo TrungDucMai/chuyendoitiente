@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+<label><b>Amount</b></label>
+<input type="number" id="sotien"> <br>
+<label><b>Fromcurrency</b></label> <br>
+<select id="from">
+    <option value="1">VND</option>
+    <option value="23000">USD</option>
+</select> <br>
+<label><b>Tocurrency</b></label> <br>
+    <select id="to">
+    <option value="23000">USD</option>
+    <option value="1">VND</option>
+</select> <br>
+<button id="convert" name="chuyendoi" onclick="chuyendoi()">Convert</button>
+<p id="result">Kết quả</p>
+
+<script>
+    function chuyendoi(){
+        let sotien;
+        let Form;
+        let to;
+        sotien= +document.getElementById('sotien').value;
+        Form= +document.getElementById('from').value;
+        to = +document.getElementById('to').value;
+        let result = sotien*(Form/to);
+            document.getElementById('result').innerHTML = result;
+
+
+
+
+    }
+</script>
+
+
+</body>
+</html>
